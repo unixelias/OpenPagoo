@@ -1,0 +1,182 @@
+html {
+    font-family:Arial;
+    font-size:11pt
+}
+
+table {
+    border-collapse:collapse;
+    page-break-after:always
+}
+
+@page {
+    left-margin: 0.7in;
+    right-margin: 0.2in;
+    top-margin: 0.7in;
+    bottom-margin: 0.7in;
+}
+
+.gridlines td {
+    border:1px dotted black
+}
+
+/*
+    Estilo de fontes
+*/
+.cen { 
+    text-align:center !important;
+}
+.dir {
+    text-align:right !important;
+}
+.esq {
+    text-align:left !important;
+}
+
+td.aviso {
+    vertical-align:middle;
+    text-align:left;
+    padding-left:4px;
+    font-size:8pt
+}
+
+td.aviso-canhoto {
+    vertical-align:bottom;
+    text-align:left;
+    font-weight:bold;
+    padding-left:4px;
+    font-size:8pt
+}
+td.tracejada { 
+    vertical-align:middle;
+    text-align:right;
+    padding-right:0px;
+    border-bottom:1px dashed #000000 !important;
+    font-size:7pt
+}
+
+td.aviso-tracejada {
+    vertical-align:top;
+    text-align:right;
+    padding-left:4px;
+    font-size:7pt
+}
+
+td.titulo-empresa {
+    vertical-align:middle;
+    text-align:left;
+    padding-left:4px;
+    font-weight:bold
+}
+
+td.logo-empresa {
+    vertical-align:middle;
+    text-align:center;
+    font-size:7pt
+}
+
+td.cnpj-empresa {
+    vertical-align:middle;
+    text-align:left;
+    font-weight:bold;
+    padding-left:4px;
+    font-size:9pt
+}
+td.end-empresa {
+    vertical-align:middle;
+    text-align:left;
+    padding-left:4px;
+    font-size:7pt
+}
+
+td.logo-banco {
+    text-align:center;
+    border-bottom:1px solid #000000 !important
+}
+
+td.numero-banco {
+    text-align:center;
+    border-bottom:1px solid #000000 !important;
+    border-left:1px solid #000000 !important;
+    border-right:1px solid #000000 !important;
+    font-weight:bold; font-size:12pt
+}
+
+td.linha-digitavel {
+    text-align:center;
+    border-bottom:1px solid #000000 !important;
+    font-weight:bold
+}
+
+
+td.topline {
+    vertical-align:top;
+    text-align:left;
+    border-top:1px solid #000000 !important;
+    border-left:1px solid #000000 !important;
+    border-right:1px solid #000000 !important;
+    padding-left:4px;
+    font-size:7pt
+}
+
+td.bottomline {
+    vertical-align:bottom;
+    text-align:left;
+    border-left:1px solid #000000 !important;
+    border-bottom:1px solid #000000 !important;
+    border-right:1px solid #000000 !important;
+    padding-left:4px;
+    padding-right:4px;
+    font-weight:bold
+}
+
+
+td.instrucao {
+    vertical-align:bottom; text-align:left;
+    border-left:1px solid #000000 !important;
+    padding-left:4px;
+    font-weight:bold
+}
+
+td.destaque {
+    background-color:rgb(212, 212, 212)
+}
+
+
+td.topline-invertida {
+    vertical-align:bottom;
+    text-align:left;
+    border-bottom:1px solid #000000 !important;
+    border-top:1px solid #000000 !important;
+    border-left:1px solid #000000 !important;
+    padding-left:4px;
+    font-size:7pt
+}
+
+td.compensacao {
+    vertical-align:top;
+    text-align:left; 
+    font-weight:bold; 
+    font-size:9pt
+}
+
+
+/*
+    Largura das colunas
+*/
+table.sheet0 col.col0 { width:100pt }
+table.sheet0 col.col1, col.col2 { width:50pt }
+table.sheet0 col.col3, col.col7, col.col9 { width:60pt }
+table.sheet0 col.col4 { width:50pt }
+table.sheet0 col.col5, col.col6 { width:45pt }
+table.sheet0 col.col8 { width:100pt }
+
+/*
+    Altura das linhas
+*/
+table.sheet0 tr.row8 { height:8pt }
+table.sheet0 tr.row10 { height:10pt }
+table.sheet0 tr, tr.row12 { height:12pt }
+table.sheet0 tr.row15 { height:15pt }
+table.sheet0 tr.row18 { height:18pt }
+table.sheet0 tr.row40 { height:40pt }
+
