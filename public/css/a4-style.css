@@ -3,22 +3,73 @@ html {
     font-size:11pt
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
 table {
     border-collapse:collapse;
     page-break-after:always
 }
 
-@page {
-    left-margin: 0.7in;
-    right-margin: 0.2in;
-    top-margin: 0.7in;
-    bottom-margin: 0.7in;
+.boletoa4 {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 0;
+    border-radius: 5px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    .boletoa4 {
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+        text-align:center !important;
+        margin: 20mm auto;
+    }
+}
+
 
 .gridlines td {
     border:1px dotted black
 }
 
+/*
+    Largura das colunas
+*/
+table.boletoa4 col.col0 { width:100pt }
+table.boletoa4 col.col1, col.col2 { width:50pt }
+table.boletoa4 col.col3, col.col7, col.col9 { width:60pt }
+table.boletoa4 col.col4 { width:50pt }
+table.boletoa4 col.col5, col.col6 { width:45pt }
+table.boletoa4 col.col8 { width:100pt }
+
+/*
+    Altura das linhas
+*/
+table.boletoa4 tr.row8 { height:8pt }
+table.boletoa4 tr.row10 { height:10pt }
+table.boletoa4 tr { height:6pt }
+table.boletoa4 tr.row20 { height:20pt }
+table.boletoa4 tr.row40 { height:40pt }
 /*
     Estilo de fontes
 */
@@ -114,6 +165,7 @@ td.topline {
     border-top:1px solid #000000 !important;
     border-left:1px solid #000000 !important;
     border-right:1px solid #000000 !important;
+    padding-top:2px;
     padding-left:4px;
     font-size:7pt
 }
@@ -156,27 +208,7 @@ td.compensacao {
     vertical-align:top;
     text-align:left; 
     font-weight:bold; 
-    font-size:9pt
+    font-size:8pt
 }
 
-
-/*
-    Largura das colunas
-*/
-table.sheet0 col.col0 { width:100pt }
-table.sheet0 col.col1, col.col2 { width:50pt }
-table.sheet0 col.col3, col.col7, col.col9 { width:60pt }
-table.sheet0 col.col4 { width:50pt }
-table.sheet0 col.col5, col.col6 { width:45pt }
-table.sheet0 col.col8 { width:100pt }
-
-/*
-    Altura das linhas
-*/
-table.sheet0 tr.row8 { height:8pt }
-table.sheet0 tr.row10 { height:10pt }
-table.sheet0 tr, tr.row12 { height:12pt }
-table.sheet0 tr.row15 { height:15pt }
-table.sheet0 tr.row18 { height:18pt }
-table.sheet0 tr.row40 { height:40pt }
 
