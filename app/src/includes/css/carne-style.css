@@ -1,0 +1,151 @@
+html {
+    font-family:Arial;
+    font-size:7.5pt
+}
+
+
+.pagina {
+    width: 210mm;
+    height: 98.55mm !important;
+    padding: 0;
+    border-radius: 5px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    page-break-after: avoid;
+    vertical-align: bottom !important;
+}
+
+@media print {
+    .carne {
+        margin-left: 9mm;
+        margin-right: 2mm;
+        margin-top: 0.5mm;
+        page-break-after: avoid;
+    }
+}
+
+tr {
+    height: 3pt !important;
+}
+.gridlines td { border:1px dotted black }
+
+table.carne {
+    vertical-align: bottom !important;
+    margin-left: 9mm;
+}
+
+td.pontilhado-vertical-a { 
+    vertical-align:middle;
+    text-align:center;
+    border-right:0.1px dashed #000000 !important;
+    color:#000000;
+}
+
+td.pontilhado-vertical-b {
+    border-right: none !important;
+}
+
+td.logo-banco-maior, td.logo-banco-menor {
+    text-align: center;
+}
+
+td.logo-banco-maior img {
+    padding: 1pt;
+    height: 20pt !important;
+    width: 100pt !important;
+}
+td.numero-recibo img {
+    padding: 1pt;
+    height: 20pt !important;
+    width: 20pt !important; 
+}
+
+td.logo-banco-menor img {
+    padding: 1pt;
+    height: 18pt !important;
+    width: 100pt !important; 
+}
+
+td.pagador {
+    vertical-align:bottom;
+    text-align:center !important;
+    border-top:none;
+    padding-left:4px;
+    padding-right:4px;
+    font-size:7pt;
+    font-weight:bold
+}
+
+td.barras {
+    vertical-align:top;
+    text-align:left;
+    border:none !important;
+    border-bottom:0.1px dashed #000000 !important;
+    height: 40pt !important;
+}
+
+td.cod-baixa {
+    vertical-align:bottom;
+    text-align:right;
+    border-bottom:1px solid #000000 !important;
+    border-right:1px solid #000000 !important;
+    border-left: none !important;
+    padding-bottom:2px;
+    padding-right:2px;
+    font-size:5pt
+}
+
+td.avalista {
+    vertical-align:bottom;
+    text-align:left;
+    border-bottom:1px solid #000000 !important;
+    border-left:1px solid #000000 !important;
+    border-right: none !important;
+    font-weight:bold;
+    padding-bottom:4px;
+    padding-left:4px;
+    font-size: 7pt
+}
+
+
+td.compensacao-carne {
+    vertical-align:top;
+    text-align:end; 
+    font-weight:bold; 
+    font-size:7pt
+}
+
+td.autentica-carne {
+    vertical-align:top;
+    text-align:right;
+    border-left: none !important;
+    font-size:5pt;
+}
+
+
+td.sem-borda-esq {
+    border-left: none !important;
+}
+
+td.sem-borda-dir {
+    border-right: none !important;
+}
+
+td.sem-borda-ambos {
+    border-left: none !important;
+    border-right: none !important;
+}
+
+
+table.carne col.col0, col.col1 { width:50pt }
+table.carne col.col2 { width:3pt }
+table.carne col.col3 { width:3pt }
+table.carne col.col5 { width:30pt }
+table.carne col.col6 { width:50pt }
+table.carne col.col7, col.col4 { width:65pt }
+table.carne col.col8 { width:40pt }
+table.carne col.col9 { width:40pt }
+table.carne col.col10 { width:60pt }
+table.carne col.col11 { width:100pt }
+
