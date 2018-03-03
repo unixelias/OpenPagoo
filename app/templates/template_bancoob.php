@@ -6,7 +6,7 @@ use unixelias\OpenPagoo\Boletos;
  * Para validar os dados insira informações reais
  */
 $boleto = new Boletos(Boletos::BOLETOSPHP_BANCOOB);
-//var_dump($boleto);
+var_dump($boleto);
 $boleto->setData([
 		//Campos requeridos
 
@@ -65,59 +65,7 @@ $boleto->setData([
 ]);
 $boleto->setImageBasePath("../imagens/");
 echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
-echo $boleto->render('carne');
+
 //echo '<br /><br /><br /><br /><br /><br />';
 //echo $boleto->render('a4');
 

@@ -72,14 +72,14 @@
 					<td class="topline sem-borda-dir">Nosso Número</td>
 				</tr>
 				<tr>
-					<td class="bottomline dir sem-borda-esq">R$</td>
-					<td class="bottomline dir sem-borda-dir">25</td>
-					<td class="bottomline dir sem-borda-esq">01/04/16</td>
+					<td class="bottomline dir sem-borda-esq"><?php echo $dadosboleto['especie'] ?></td>
+					<td class="bottomline dir sem-borda-dir"><?php echo $dadosboleto['quantidade'] ?></td>
+					<td class="bottomline dir sem-borda-esq"><?php echo $dadosboleto['data_documento'] ?></td>
 					<td class="bottomline dir" colspan="2"><?php echo $dadosboleto['numero_documento'] ?></td>
-					<td class="bottomline dir">DM</td>
-					<td class="bottomline dir">A</td>
-					<td class="bottomline dir" colspan="2">23/07/17</td>
-					<td class="bottomline dir sem-borda-dir">160423-6</td>
+					<td class="bottomline dir"><?php echo $dadosboleto['especie_doc'] ?></td>
+					<td class="bottomline dir"><?php echo $dadosboleto['aceite'] ?></td>
+					<td class="bottomline dir" colspan="2"><?php echo $dadosboleto['data_processamento'] ?></td>
+					<td class="bottomline dir sem-borda-dir"><?php echo $dadosboleto['nosso_numero'] ?></td>
 				</tr>
 				<tr>
 					<td class="topline sem-borda-ambos" colspan="2">Agência/Código do Cedente</td>
@@ -93,11 +93,11 @@
 				<tr>
 					<td class="bottomline dir sem-borda-ambos" colspan="2"><?php echo $dadosboleto['agencia_codigo'] ?></td>
 					<td class="bottomline destaque  sem-borda-esq" colspan="2"></td>
-					<td class="bottomline dir">1</td>
-					<td class="bottomline dir">R$</td>
-					<td class="bottomline dir" colspan="2">1</td>
-					<td class="bottomline dir">25,00</td>
-					<td class="bottomline dir  sem-borda-dir">25,00</td>
+					<td class="bottomline dir"><?php echo $dadosboleto['carteira'] ?></td>
+					<td class="bottomline dir"><?php echo $dadosboleto['especie'] ?></td>
+					<td class="bottomline dir" colspan="2"><?php echo $dadosboleto['quantidade'] ?><</td>
+					<td class="bottomline dir"><?php echo $dadosboleto['valor_unitario'] ?></td>
+					<td class="bottomline dir  sem-borda-dir"><?php echo $dadosboleto['valor_boleto'] ?></td>
 				</tr>
 				<tr>
 					<td class="topline  sem-borda-ambos" colspan="2">Nosso Número</td>
@@ -105,27 +105,27 @@
 					<td class="topline  sem-borda-dir">(-) Desconto / Abatimentos</td>
 				</tr>
 				<tr>
-					<td class="bottomline dir sem-borda-ambos" colspan="2">160423-6</td>
-					<td class="instrucao  sem-borda-esq" colspan="7">COBRAR MORA/DIAR$ 3,30 APOS O VENCIMENTO</td>
-					<td class="bottomline dir  sem-borda-dir">2.30</td>
+					<td class="bottomline dir sem-borda-ambos" colspan="2"><?php echo $dadosboleto['nosso_numero'] ?></td>
+					<td class="instrucao  sem-borda-esq" colspan="7"><?php echo $dadosboleto['instrucoes1']; ?></td>
+					<td class="bottomline dir  sem-borda-dir"><?php echo $dadosboleto['valor_desconto_1']; ?></td>
 				</tr>
 				<tr>
 					<td class="topline  sem-borda-ambos" colspan="2">(=) Valor documento</td>
-					<td class="instrucao sem-borda-esq" colspan="7">Fulano de Tal (38) 9 9999-0000 / (38) 3531-9999</td>
+					<td class="instrucao sem-borda-esq" colspan="7"><?php echo $dadosboleto['instrucoes2']; ?></td>
 					<td class="topline  sem-borda-dir">(+) Mora / Multa</td>
 				</tr>
 				<tr>
-					<td class="bottomline dir  sem-borda-ambos" colspan="2">25,00</td>
-					<td class="instrucao sem-borda-esq" colspan="7">Reimpressão do Boleto http://nextstepsi.com.br/</td>
-					<td class="bottomline dir sem-borda-dir">4,20</td>
+					<td class="bottomline dir  sem-borda-ambos" colspan="2"><?php echo $dadosboleto['valor_boleto'] ?></td>
+					<td class="instrucao sem-borda-esq" colspan="7"><?php echo $dadosboleto['instrucoes3']; ?></td>
+					<td class="bottomline dir sem-borda-dir"><?php echo $dadosboleto['valor_multa'] ?></td>
 				</tr>
 				<tr>
 					<td class="topline sem-borda-ambos" colspan="2">(-) Desconto / Abatimentos</td>
-					<td class="instrucao  sem-borda-esq" colspan="7">Next Step Empresa Júnior de Sistemas de Informação da UFVJM</td>
+					<td class="instrucao  sem-borda-esq" colspan="7"><?php echo $dadosboleto['instrucoes4']; ?></td>
 					<td class="topline sem-borda-dir">(+) Outros acréscimos</td>
 				</tr>
 				<tr>
-					<td class="bottomline dir sem-borda-ambos" colspan="2">2,30</td>
+					<td class="bottomline dir sem-borda-ambos" colspan="2"><?php echo $dadosboleto['valor_desconto_1']; ?></td>
 					<td class="instrucao sem-borda-esq" colspan="7"></td>
 					<td class="bottomline dir sem-borda-dir">3.14</td>
 				</tr>
@@ -135,28 +135,28 @@
 					<td class="topline sem-borda-dir">(=) Valor cobrado</td>
 				</tr>
 				<tr>
-					<td class="bottomline dir  sem-borda-ambos" colspan="2">4,20</td>
-					<td class="instrucao sem-borda-esq" colspan="7">Clientildo Pagador da Silva</td>
+					<td class="bottomline dir  sem-borda-ambos" colspan="2"><?php echo $dadosboleto['valor_multa'] ?></td>
+					<td class="instrucao sem-borda-esq" colspan="7"><?php echo $dadosboleto['sacado'] ?></td>
 					<td class="bottomline dir sem-borda-dir">30,04</td>
 				</tr>
 				<tr>
 					<td class="topline sem-borda-ambos" colspan="2">(+) Outros acréscimos</td>
-					<td class="instrucao sem-borda-esq" colspan="7">Rua das Camélias, nº 69</td>
+					<td class="instrucao sem-borda-esq" colspan="7"><?php echo $dadosboleto['endereco1'] ?></td>
 					<td></td>
 				</tr>
 				<tr>
 					<td class="bottomline dir sem-borda-ambos" colspan="2">3,14</td>
-					<td class="instrucao  sem-borda-esq" colspan="7">Diamantina/MG – CEP 39.100-000</td>
+					<td class="instrucao  sem-borda-esq" colspan="7"><?php echo $dadosboleto['endereco2'] ?></td>
 					<td></td>
 				</tr>
 				<tr>
 					<td class="topline  sem-borda-ambos" colspan="2">(=) Valor cobrado</td>
                     <td class="avalista sem-borda-esq">Sacado / Avalista:</td>
-                    <td class="avalista sem-borda-esq" colspan="6"> Nome do Avalista, se houver / CPF</td>
+                    <td class="avalista sem-borda-esq" colspan="6"><?php echo isset($dadosboleto['avalista']) ? ' '.$dadosboleto['avalista'] : '' ?></td>
 					<td class="cod-baixa">Cód. baixa</td>
 				</tr>
 				<tr>
-					<td class="bottomline dir sem-borda-ambos" colspan="2">30,04</td>
+					<td class="bottomline dir sem-borda-ambos" colspan="2"></td>
 					<td ></td>
 					<td class="autentica-carne" colspan="7">Autenticação mecânica </td>
 					<td class="compensacao-carne">Ficha de Compensação</td>
@@ -167,7 +167,7 @@
 					<td class="barras" colspan="7" rowspan="4"><?php echo self::fbarcode($dadosboleto['codigo_barras'], $boleto->getImageBasePath()); ?></td>
 				</tr>
 				<tr>
-					<td class="instrucao dir sem-borda-ambos" colspan="2" >Nome do Sacado Muito Grande da Silva Sauro</td>
+					<td class="instrucao dir sem-borda-ambos" colspan="2" ><?php echo $dadosboleto['sacado'] ?></td>
 					<td colspan="2"></td>
 				</tr>
 				<tr>

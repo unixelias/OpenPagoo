@@ -12,7 +12,6 @@ html {
     margin: 0 auto;
     background: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    page-break-after: avoid;
     vertical-align: bottom !important;
 }
 
@@ -23,11 +22,14 @@ html {
         margin-top: 0.5mm;
         page-break-after: avoid;
     }
+    body {
+        background-color: white !important;
+    }
+    .pagina {
+        box-shadow: none;
+    }
 }
 
-tr {
-    height: 3pt !important;
-}
 .gridlines td { border:1px dotted black }
 
 table.carne {
@@ -82,7 +84,7 @@ td.barras {
     text-align:left;
     border:none !important;
     border-bottom:0.1px dashed #000000 !important;
-    height: 40pt !important;
+    height: 51pt !important;
 }
 
 td.cod-baixa {
