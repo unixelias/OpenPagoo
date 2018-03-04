@@ -8,6 +8,7 @@ Aqui está uma descrição de como os arquivos estão distribuídos no projeto
 ~~~~~~~~~~~~~~~~~~
 
 .. code:: bash
+
     .
     ├── README.md
     ├── LICENSE
