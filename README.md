@@ -1,11 +1,13 @@
-# boletos
-Sistema para geração de boletos
 # OpenPagoo Orientado à Objetos
+
+Sistema para geração de boletos.
 
 Esse pacote foi criado a partir do pacote Boletosphp-oo ([link](https://github.com/giordanolima/boletosphp-oo)) e fornece a mesma lógica  orientada a objeto, para uma melhor aplicação em frameworks e uso através do composer.
 
 ## Pacote em desenvolvimento
+
 Este pacote ainda encontra-se em fase de adaptação e não tem suporte a todos os bancos disponíveis no pacote original. Aos poucos estes vão sendo adicionados. Dê um fork e contribua e ajude com correções de bugs e novas features. Atualmente o pacote possui suporte aos seguintes bancos:
+
 * Itaú
 * Sicredi
 * Bancoob
@@ -16,19 +18,20 @@ Configure o composer para usar um repositório vcs
 
 ```json
     (...)
-	"require" : {
-		"nxstep-si/nx-boletos" : "dev-master"
-	},
+    "require" : {
+        "nxstep-si/nx-boletos" : "dev-master"
+    },
     (...)
     "repositories" : [{
-			"url" : "https://github.com/nxstep-si/nx-boletos",
-			"type" : "vcs"
-		}
-	]
+            "url" : "https://github.com/nxstep-si/nx-boletos",
+            "type" : "vcs"
+        }
+    ]
     (...)
 ```
 
 ## Uso
+
 ```php
 use unixelias\OpenPagoo\Boletos;
 $boleto = new Boletos(Boletos::BOLETOSPHP_ITAU);
@@ -38,6 +41,7 @@ echo $boleto->render();
 ```
 
 ## Constantes
+
 Ao instanciar a classe, o banco que será gerado o boleto deverá ser passado como parâmetro. Segue abaixo a tabela dos bancos e suas respectivas constantes:
 
 | Banco   | Constante          |
@@ -47,8 +51,10 @@ Ao instanciar a classe, o banco que será gerado o boleto deverá ser passado co
 | Bancoob | BOLETOSPHP_BANCOOB |
 
 ## Dados
+
 Os dados dos boletos deverão ser passados através do método `setData`no formato de array, no estilo `campo => valor`.
 Ex.:
+
 ```php
 $boleto->setData([
     "valor_boleto" => "99,00",
@@ -57,6 +63,7 @@ $boleto->setData([
     (...)
 ]);
 ```
+
 Os dados padrão a todos os bancos são:
 
 |        Campo       | Descrição                                                 | Obrigatório |
@@ -91,9 +98,13 @@ Os dados padrão a todos os bancos são:
 |     especie_doc    | Campo especie_doc do boleto                               |     NÃO     |
 |      cidade_uf     | Cidade/UF do cedente                                      |     NÃO     |
 |       cedente      | Razão Social ou Nome Completo do cedente                  |     NÃO     |
+
 Cada banco possui seus campos específicos, são eles, respectivamente:
+
 ### Itaú
+
 Não existem campos específicos para esse banco.
+
 ### Sicredi
 
 |   Campo  | Descrição                                                                          | Obrigatório |
@@ -102,6 +113,7 @@ Não existem campos específicos para esse banco.
 | byte_idt | Byte de identificação do cedente do bloqueto utilizado para compor o nosso número. |     SIM     |
 
 ### Bancoob
+
 TODO Descrição
 
 Em fase de pré-homologação

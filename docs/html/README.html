@@ -1,0 +1,247 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>OpenPagoo Orientado a Objetos &#8212; documentação Open Pagoo 0.0.1</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="openpagoo-orientado-a-objetos">
+<h1>OpenPagoo Orientado a Objetos<a class="headerlink" href="#openpagoo-orientado-a-objetos" title="Link permanente para este título">¶</a></h1>
+<p>Esse pacote foi criado a partir da integração dos pacotes <a class="reference external" href="https://github.com/giordanolima/boletosphp-oo">Boletosphp-oo</a> e <a class="reference external" href="https://github.com/QuilhaSoft/OpenCnabPHP">OpenCnabPHP</a> para fundir o processo de geração de layouts de boleto para impressão com código de barras e a geração e processamento de arquivos de remessa e retorno aos bancos.
+Esse pacote busca aplicar a lógica de Orientação a Objeto, para uma melhor aplicação em frameworks e uso através do composer.</p>
+<div class="section" id="pacote-em-desenvolvimento">
+<h2>Pacote em desenvolvimento<a class="headerlink" href="#pacote-em-desenvolvimento" title="Link permanente para este título">¶</a></h2>
+<p>Este pacote ainda encontra-se em fase de adaptação e não tem suporte a todos os bancos disponíveis no pacote original.
+Será desenvolvido primeiramente o pacote para o SICOOB e em seguida serão adaptados os demais. Sinta-se livre para usar e contribuir com o pacote, através de correções de bugs e/ou novas features.</p>
+</div>
+<div class="section" id="instalacao-do-pacote">
+<h2>instalação do pacote<a class="headerlink" href="#instalacao-do-pacote" title="Link permanente para este título">¶</a></h2>
+<p>A instalação pode ser feita através do <a class="reference external" href="https://www.phpmaranhao.com.br/tag/instalando-o-composer/">Composer</a>: Configure o composer para usar um repositório vcs (Github)</p>
+<p>Instalação através do composer: Configure o composer para usar um
+repositório vcs</p>
+<div class="code json highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="s2">&quot;require&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;unixelias/OpenPagoo&quot;</span> <span class="p">:</span> <span class="s2">&quot;master&quot;</span>
+<span class="p">},</span>
+<span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="s2">&quot;repositories&quot;</span> <span class="p">:</span> <span class="p">[{</span>
+        <span class="s2">&quot;url&quot;</span> <span class="p">:</span> <span class="s2">&quot;https://github.com/nxstep-si/nx-boletos&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;vcs&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+<span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="uso">
+<h2>Uso<a class="headerlink" href="#uso" title="Link permanente para este título">¶</a></h2>
+<div class="code php highlight-default notranslate"><div class="highlight"><pre><span></span>use unixelias\OpenPagoo\Boletos;
+$boleto = new Boletos(Boletos::BOLETOSPHP_ITAU);
+$boleto-&gt;setData([...]);
+$boleto-&gt;setImageBasePath(&quot;path/to/images/&quot;);
+echo $boleto-&gt;render();
+</pre></div>
+</div>
+</div>
+<div class="section" id="constantes">
+<h2>Constantes<a class="headerlink" href="#constantes" title="Link permanente para este título">¶</a></h2>
+<p>Ao instanciar a classe, o banco que será gerado o boleto deverá ser
+passado como parâmetro. Segue abaixo a tabela dos bancos e suas
+respectivas constantes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Banco</th>
+<th class="head">Constante</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Itaú</td>
+<td>BOLETOSPHP_ITAU</td>
+</tr>
+<tr class="row-odd"><td>Sicredi</td>
+<td>BOLETOSPHP_SICREDI</td>
+</tr>
+<tr class="row-even"><td>Bancoob</td>
+<td>BOLETOSPHP_BANCOOB</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dados">
+<h2>Dados<a class="headerlink" href="#dados" title="Link permanente para este título">¶</a></h2>
+<p>Os dados dos boletos deverão ser passados através do método
+<code class="docutils literal notranslate"><span class="pre">setData</span></code>no formato de array, no estilo <code class="docutils literal notranslate"><span class="pre">campo</span> <span class="pre">=&gt;</span> <span class="pre">valor</span></code>. Ex.:</p>
+<div class="code php highlight-default notranslate"><div class="highlight"><pre><span></span>$boleto-&gt;setData([
+    &quot;valor_boleto&quot; =&gt; &quot;99,00&quot;,
+    &quot;data_vencimento&quot; =&gt; &quot;01/04/2016&quot;,
+    &quot;nosso_numero&quot; =&gt; 00000001,
+    (...)
+]);
+</pre></div>
+</div>
+<p>Os dados padrão a todos os bancos são:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Campo</th>
+<th class="head">Descrição</th>
+<th class="head">Obrigatório</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>valor_boleto</td>
+<td>Valor do boleto no
+formato de moeda
+brasileira.</td>
+<td>SIM</td>
+</tr>
+<tr class="row-odd"><td>data_vencimento</td>
+<td>Data de vencimento do
+boleto no formato
+d/m/Y</td>
+<td>SIM</td>
+</tr>
+<tr class="row-even"><td>nosso_numero</td>
+<td>Número que será usado
+como base para gerar
+o nosso número</td>
+<td>SIM</td>
+</tr>
+<tr class="row-odd"><td>agencia</td>
+<td>Agência do cedente</td>
+<td>SIM</td>
+</tr>
+<tr class="row-even"><td>conta</td>
+<td>Conta do cedente</td>
+<td>SIM</td>
+</tr>
+<tr class="row-odd"><td>conta_dv</td>
+<td>Dígito verificador da
+conta do cedente</td>
+<td>SIM</td>
+</tr>
+<tr class="row-even"><td>carteira</td>
+<td>Carteira do cedente</td>
+<td>SIM</td>
+</tr>
+<tr class="row-odd"><td>identificacao</td>
+<td>Nome do cedente</td>
+<td>SIM</td>
+</tr>
+<tr class="row-even"><td>cpf_cnpj</td>
+<td>CPF ou CNPJ do
+cedente</td>
+<td>SIM</td>
+</tr>
+<tr class="row-odd"><td>numero_documento</td>
+<td>Campo “Número do
+Documento” do boleto</td>
+<td>NÃO</td>
+</tr>
+<tr class="row-even"><td>data_documento</td>
+<td>Data do documento.
+Formato: d/m/Y</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Tabela de Conteúdo</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">OpenPagoo Orientado a Objetos</a><ul>
+<li><a class="reference internal" href="#pacote-em-desenvolvimento">Pacote em desenvolvimento</a></li>
+<li><a class="reference internal" href="#instalacao-do-pacote">instalação do pacote</a></li>
+<li><a class="reference internal" href="#uso">Uso</a></li>
+<li><a class="reference internal" href="#constantes">Constantes</a></li>
+<li><a class="reference internal" href="#dados">Dados</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Essa Página</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/README.rst.txt"
+            rel="nofollow">Exibir Fonte</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Busca rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Ir" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Elias Alves.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/README.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
