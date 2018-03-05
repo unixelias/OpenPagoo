@@ -25,7 +25,7 @@ $boleto->setData([
 	"data_documento" => "01/04/2016",
 	"data_processamento" => "01/04/2016",
 	"endereco" => "Rua Endereço do Cedente, 1000",
-	"sacado" => "Nome do Sacado",
+	"sacado" => "Nome do Sacado Muito Grande da Silva Sauro",
 	"endereco1" => "Primeira linha endereço sacado",
 	"endereco2" => "Segunda linha endereço sacado",
 
@@ -61,16 +61,18 @@ $boleto->setData([
 ]);
 $boleto->setImageBasePath("../imagens/");
 echo $boleto->render('carne');
+echo $boleto->render('carne');
+echo $boleto->render('carne');
 
 //echo '<br /><br /><br /><br /><br /><br />';
 //echo $boleto->render('a4');
 
 
-
+/*
 $dadosboleto = $boleto->getDadosBoleto();
 
 foreach ($dadosboleto as $i => $value) {
 	echo ($dadosboleto[$i] . "<br />");
 }
-
+*/
 ?>

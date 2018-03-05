@@ -107,7 +107,7 @@
 			<td class="bottomline dir" colspan="2"><?php echo $dadosboleto['valor_desconto_2'] ?></td>
 			<td class="bottomline dir" colspan="2"><?php echo $dadosboleto['valor_multa'] ?></td>
 			<td class="bottomline dir" colspan="2"></td>
-			<td class="bottomline dir destaque" colspan="2"> </td>
+			<td class="bottomline dir destaque" colspan="2"> 99,99 </td>
 		  </tr>
 		  <tr>
 			<td class="topline" colspan="9">Sacado</td>

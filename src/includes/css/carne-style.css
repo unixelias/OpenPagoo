@@ -81,9 +81,10 @@ td.pagador {
 
 td.barras {
     vertical-align:top;
+    padding-bottom:2px;
     text-align:left;
     border:none !important;
-    border-bottom:0.1px dashed #000000 !important;
+    /*border-bottom:0.1px dashed #000000 !important;*/
     height: 51pt !important;
 }
 

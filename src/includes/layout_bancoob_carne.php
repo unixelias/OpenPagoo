@@ -156,7 +156,7 @@
 					<td class="cod-baixa">Cód. baixa</td>
 				</tr>
 				<tr>
-					<td class="bottomline dir sem-borda-ambos" colspan="2"></td>
+					<td class="bottomline dir sem-borda-ambos" colspan="2">30,04</td>
 					<td ></td>
 					<td class="autentica-carne" colspan="7">Autenticação mecânica </td>
 					<td class="compensacao-carne">Ficha de Compensação</td>
@@ -175,7 +175,7 @@
 				</tr>
 				<tr>
 					<td class="pagador tracejada" colspan="2">Recibo do Sacado</td>
-					<td class="tracejada" colspan="2"></td>
+					<td class="tracejada" colspan="9"></td>
 					<td class="tracejada" >Corte na linha pontilhada</td>
 				</tr>
 				<tr></tr>
