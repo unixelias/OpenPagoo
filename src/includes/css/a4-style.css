@@ -1,6 +1,6 @@
 html {
-    font-family:Arial, Helvetica;
-    font-size:11pt
+    font-family: Arial;
+    font-size: 13px
 }
 
 body {
@@ -8,14 +8,15 @@ body {
     padding: 0;
     background-color: #FAFAFA;
 }
+
 * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
 
 table {
-    border-collapse:collapse;
-    page-break-after:always
+    border-collapse: collapse;
+    page-break-after: always
 }
 
 .boletoa4 {
@@ -42,87 +43,137 @@ table {
         box-shadow: initial;
         background: initial;
         page-break-after: always;
-        text-align:center !important;
+        text-align: center !important;
         margin: 20mm auto;
         margin: 8mm auto;
     }
 }
 
-
-.gridlines td {
-    border:1px dotted black
-}
-
 /*
     Largura das colunas
 */
-table.boletoa4 col.col0 { width:100pt }
-table.boletoa4 col.col1, col.col2 { width:50pt }
-table.boletoa4 col.col3, col.col7, col.col9 { width:60pt }
-table.boletoa4 col.col4 { width:50pt }
-table.boletoa4 col.col5, col.col6 { width:45pt }
-table.boletoa4 col.col8 { width:100pt }
+
+table.boletoa4 col.col0 {
+    width: 90pt
+}
+
+table.boletoa4 col.col1,
+col.col2 {
+    width: 40pt
+}
+
+table.boletoa4 col.col7,
+col.col9 {
+    width: 60pt
+}
+
+table.boletoa4 col.col3 {
+    width: 50pt
+}
+
+table.boletoa4 col.col4 {
+    width: 60pt
+}
+
+table.boletoa4 col.col5 {
+    width: 40px
+}
+
+table.boletoa4 col.col6 {
+    width: 60px
+}
+
+table.boletoa4 col.col8 {
+    width: 100pt
+}
 
 /*
     Altura das linhas
 */
-table.boletoa4 tr.row8 { height:8pt }
-table.boletoa4 tr.row10 { height:10pt }
-table.boletoa4 tr { height:6pt }
-table.boletoa4 tr.row20 { height:20pt }
-table.boletoa4 tr.row40 { height:40pt }
+
+table.boletoa4 td.row8 {
+    height: 10.66px;
+    font-size: 10.66px;
+}
+
+table.boletoa4 td.row10 {
+    height: 13.33px
+}
+
+table.boletoa4 td.pagamento {
+    height: 16px !important
+}
+
+table.boletoa4 td {
+    height: 10pt
+}
+
+table.boletoa4 td.row20 {
+    height: 20pt
+}
+
+table.boletoa4 td.row40 {
+    height: 40pt
+}
+
 /*
     Estilo de fontes
 */
-.cen { 
-    text-align:center !important;
+
+.cen {
+    text-align: center !important;
 }
+
 .dir {
-    text-align:right !important;
+    text-align: right !important;
 }
+
 .esq {
-    text-align:left !important;
+    text-align: left !important;
 }
 
 td.aviso {
-    vertical-align:middle;
-    text-align:left;
-    padding-left:4px;
-    font-size:8pt
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 4px;
+    font: size 10px;
 }
 
 td.aviso-canhoto {
-    vertical-align:bottom;
-    text-align:left;
-    font-weight:bold;
-    padding-left:4px;
-    font-size:8pt
+    vertical-align: bottom;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 4px;
+    font: size 10px;
 }
-td.tracejada { 
-    vertical-align:middle;
-    text-align:right;
-    padding-right:0px;
-    border-bottom:0.1px dashed #000000 !important;
-    font-size:5pt
+
+td.tracejada {
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 0px;
+    border-bottom: 0.1px dashed #000000 !important;
+    font-size: 7px !important;
+    height: 8px !important
 }
 
 td.aviso-tracejada {
-    vertical-align:top;
-    text-align:right;
-    padding-left:4px;
-    font-size:7pt
+    vertical-align: top;
+    text-align: right;
+    padding-left: 4px;
+    font-size: 9.33px
 }
 
 td.titulo-empresa {
-    vertical-align:middle;
-    text-align:left;
-    padding-left:4px;
-    font-weight:bold
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 4px;
+    font-weight: bold;
+    font-size: 20px
 }
 
 td.logo-empresa {
-    vertical-align:middle;
-    text-align:center
+    vertical-align: middle;
+    text-align: center
 }
 
 td.logo-empresa img {
@@ -130,22 +181,23 @@ td.logo-empresa img {
 }
 
 td.cnpj-empresa {
-    vertical-align:middle;
-    text-align:left;
-    font-weight:bold;
-    padding-left:4px;
-    font-size:9pt
+    vertical-align: middle;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 4px;
+    font-size: 16px
 }
+
 td.end-empresa {
-    vertical-align:middle;
-    text-align:left;
-    padding-left:4px;
-    font-size:7pt
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 4px;
+    font-size: 13.33px
 }
 
 td.logo-banco {
-    text-align:center;
-    border-bottom:1px solid #000000 !important;
+    text-align: center;
+    border-bottom: 1px solid #000000 !important;
 }
 
 td.logo-banco img {
@@ -154,70 +206,65 @@ td.logo-banco img {
 }
 
 td.numero-banco {
-    text-align:center;
-    border-bottom:1px solid #000000 !important;
-    border-left:1px solid #000000 !important;
-    border-right:1px solid #000000 !important;
-    font-weight:bold; font-size:12pt
+    text-align: center;
+    border-bottom: 1px solid #000000 !important;
+    border-left: 3px solid #000000 !important;
+    border-right: 3px solid #000000 !important;
+    font-weight: bold;
+    font-size: 16px
 }
 
 td.linha-digitavel {
-    text-align:center;
-    border-bottom:1px solid #000000 !important;
-    font-weight:bold
+    text-align: center;
+    border-bottom: 1px solid #000000 !important;
+    font-weight: bold
 }
 
-
 td.topline {
-    vertical-align:top;
-    text-align:left;
-    border-top:1px solid #000000 !important;
-    border-left:1px solid #000000 !important;
-    border-right:1px solid #000000 !important;
-    padding-top:2px;
-    padding-left:4px;
-    font-size:7pt
+    vertical-align: top;
+    text-align: left;
+    border-top: 1px solid #000000 !important;
+    border-left: 1px solid #000000 !important;
+    border-right: 1px solid #000000 !important;
+    padding-top: 2px;
+    padding-left: 4px;
+    font-size: 9.33px
 }
 
 td.bottomline {
-    vertical-align:bottom;
-    text-align:left;
-    border-left:1px solid #000000 !important;
-    border-bottom:1px solid #000000 !important;
-    border-right:1px solid #000000 !important;
-    padding-left:4px;
-    padding-right:4px;
-    font-weight:bold
+    vertical-align: bottom;
+    text-align: left;
+    border-left: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+    border-right: 1px solid #000000 !important;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-weight: bold
 }
 
-
 td.instrucao {
-    vertical-align:bottom; text-align:left;
-    border-left:1px solid #000000 !important;
-    padding-left:4px;
-    font-weight:bold
+    vertical-align: bottom;
+    text-align: left;
+    border-left: 1px solid #000000 !important;
+    padding-left: 4px;
+    font-weight: bold;
+    font: size 10.66px;
 }
 
 td.destaque {
-    background-color:rgb(212, 212, 212)
+    background-color: rgb(212, 212, 212)
 }
-
 
 td.topline-invertida {
-    vertical-align:bottom;
-    text-align:left;
-    border-bottom:1px solid #000000 !important;
-    border-top:1px solid #000000 !important;
-    border-left:1px solid #000000 !important;
-    padding-left:4px;
-    font-size:7pt
+    vertical-align: bottom;
+    text-align: left;
+    border-bottom: 1px solid #000000 !important;
+    border-top: 1px solid #000000 !important;
+    border-left: 1px solid #000000 !important;
+    padding-left: 4px;
+    font-size: 9.33px
 }
 
-td.compensacao {
-    vertical-align:top;
-    text-align:left; 
-    font-weight:bold; 
-    font-size:8pt
+td.com-borda-baixo {
+    border-bottom: 1px solid !important;
 }
-
-

@@ -10,6 +10,7 @@ class Bancoob
 			'modalidade_cobranca',
 			'numero_parcela',
 			'carteira',
+			'cpf_cnpj_sacado',
 	];
 
 	public static function render($boleto,$tipo)

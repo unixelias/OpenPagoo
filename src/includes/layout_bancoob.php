@@ -45,7 +45,7 @@
 			<td class="aviso-tracejada" colspan="9">Recibo do Sacado</td>
 		  </tr>
 		  <tr>
-			<td class="logo-empresa" colspan="3" rowspan="4"><img src="<?php echo $boleto->getImageBasePath() ?>logo_ns.png" /></td>
+			<td class="logo-empresa" colspan="3" rowspan="4"><img src="<?php echo $boleto->getImageBasePath() ?>diamantinense.png" /></td>
 			<td class="titulo-empresa" colspan="6"><?php echo $dadosboleto['identificacao']; ?></td>
           </tr>
 		  <tr class="row8">
@@ -58,6 +58,14 @@
 		  </tr>
 		  <tr class="row8">
 			<td class="end-empresa"  colspan="6"><?php echo $dadosboleto['cidade_uf']; ?></td>
+			</tr>
+			<tr>
+				<td colspan="9"></td>
+			</tr>
+			<tr class="row10">
+			<td class="topline" colspan="9"> Essa lista pode ser estendida por exemplo com uma descrição dos itens de contrato</td>
+		  </tr><tr class="row10">
+			<td class="bottomline" colspan="9"> Aqui pode entrar uma descrição de itens do contrato, itens faturados, etc. Observar boleto de cartão.</td>
 		  </tr>
 		  <tr class="row40">
 			<td  colspan="9"></td>
@@ -107,13 +115,15 @@
 			<td class="bottomline dir" colspan="2"><?php echo $dadosboleto['valor_desconto_2'] ?></td>
 			<td class="bottomline dir" colspan="2"><?php echo $dadosboleto['valor_multa'] ?></td>
 			<td class="bottomline dir" colspan="2"></td>
-			<td class="bottomline dir destaque" colspan="2"> 99,99 </td>
+			<td class="bottomline dir destaque pagamento" colspan="2"> </td>
 		  </tr>
 		  <tr>
-			<td class="topline" colspan="9">Sacado</td>
+			<td class="topline" colspan="7">Sacado</td>
+			<td class="topline" colspan="2">CPF/CNPJ (Sacado)</td>
 		  </tr>
 		  <tr>
-			<td class="bottomline" colspan="9"><?php echo $dadosboleto['sacado'] ?></td>
+			<td class="bottomline" colspan="7"><?php echo $dadosboleto['sacado'] ?></td>
+			<td class="bottomline dir" colspan="2"><?php echo $dadosboleto['cpf_cnpj_sacado'] ?></td>
 		  </tr>
 		  <tr>
 			<td class="aviso-tracejada esq" colspan="8">Demonstrativo</td>
@@ -127,10 +137,7 @@
 		  </tr>
 		  <tr class="row10">
 			<td class="aviso" colspan="9"> <?php echo $dadosboleto['demonstrativo3'] ?></td>
-          </tr>
-          <tr class="row10">
-			<td class="aviso" colspan="9"> Essa lista pode ser estendida por exemplo com uma descrição dos itens de contrato</td>
-		  </tr>
+			</tr>
 		  <tr>
 			<td class="tracejada" colspan="9">Corte na linha pontilhada</td>
 		  </tr>
@@ -211,36 +218,30 @@
 			<td class="topline" colspan="2">(+) Mora / Multa</td>
 		  </tr>
 		  <tr>
-			<td class="instrucao" colspan="7"></td>
+			<td class="topline" colspan="7">Pagador</td>
 			<td class="bottomline dir" colspan="2"><?php echo $dadosboleto['valor_multa'] ?></td>
 		  </tr>
 		  <tr>
-			<td class="topline" colspan="7">Sacador / Pagador</td>
+			<td class="instrucao" colspan="7"><?php echo $dadosboleto['sacado'] ?></td>
 			<td class="topline" colspan="2">(+) Outros acréscimos</td>
 		  </tr>
 		  <tr class="row10">
-			<td class="instrucao" colspan="7"><?php echo $dadosboleto['sacado'] ?></td>
-			<td class="bottomline dir" colspan="2"></td>
-		  </tr>
-		  <tr class="row10">
 			<td class="instrucao" colspan="7"><?php echo $dadosboleto['endereco1'] ?></td>
-			<td class="topline" colspan="2">(=) Valor cobrado</td>
+			<td class="bottomline dir" colspan="2"></td>
 		  </tr>
 		  <tr class="row10">
 			<td class="instrucao" colspan="7"><?php echo $dadosboleto['endereco2'] ?></td>
+			<td class="topline" colspan="2">(=) Valor cobrado</td>
+		  </tr>
+		  <tr class="row10">
+			<td class="instrucao com-borda-baixo" colspan="7">Sacador/Avalista: <?php echo isset($dadosboleto['avalista']) ? ' '.$dadosboleto['avalista'] : '' ?></td>
 			<td class="bottomline dir" colspan="2"></td>
-		  </tr>
-		  <tr class="row20">
-			<td class="topline-invertida" colspan="7">Sacador/Avalista: </td>
-			<td class="topline-invertida" colspan="2">Cód. baixa</td>
-		  </tr>
 		  <tr>
-			<td class="aviso-tracejada" colspan="8">Autenticação mecânica -</td>
-			<td class="compensacao dir">Ficha de Compensação</td>
+			<td class="aviso-tracejada" colspan="9">Autenticação mecânica - Ficha de Compensação</td>
 		  </tr>
 		  <tr class="row40">
 			<td class="aviso" colspan="9"><?php echo self::fbarcode($dadosboleto['codigo_barras'], $boleto->getImageBasePath()); ?></td>
-		  </tr>
+			</tr>
 		</tbody>
 	</table>
   </body>
