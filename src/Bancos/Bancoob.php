@@ -391,8 +391,8 @@ class Bancoob
 		$sequencia = self::formata_numdoc($ag,4).self::formata_numdoc(str_replace("-","",$conv),10).$NNumero;
 		//echo $sequencia;
 		$cont=0;
-		$calculoDv = 0;
-		for($num=0;$num<=strlen($sequencia);$num++){
+		(int)$calculoDv = 0;
+		for($num=0;$num<strlen($sequencia);$num++){
 			$cont++;
 			if($cont == 1)
 			{
@@ -415,6 +415,7 @@ class Bancoob
 			$calculoDv += $sequencia[$num] * $constante;
 			//echo $sequencia[$num]."</br>";
 			//echo "calculoDv etapa" . $num . " " . $cont . " " . $constante . ": " . $calculoDv . "<br/>";
+			//var_dump($calculoDv);
 		}
 		//echo "calculoDv DV: " . $calculoDv . "<br/>";
 
