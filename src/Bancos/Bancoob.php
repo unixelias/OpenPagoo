@@ -37,7 +37,7 @@ class Bancoob
 		// Nosso número de até 8 dígitos - 2 digitos para o ano e outros 5 numeros sequencias por ano
 		// o ultimo é o DV
 		$nossonumero = self::formata_nossonumero($dadosboleto["nosso_numero"], $dadosboleto["agencia"], $dadosboleto["convenio"]);
-
+		//echo $nossonumero . "<br/>";
 		$nossonumerosemdv = str_replace("-","",$nossonumero);
 		$campolivre  = "$carteira$agencia$modalidadecobranca$convenio$nossonumerosemdv$numeroparcela";
 
@@ -224,10 +224,13 @@ class Bancoob
 			$soma += $numeros[$i];
 		}
 		$resto = $soma % 10;
+		//echo "Resto r : " . $resto . "<br/>";
 		$digito = 10 - $resto;
+		//echo "Digito r : " . $digito . "<br/>";
 		if ($resto == 0) {
 			$digito = 0;
 		}
+		//echo "Digito : " . $digito . "<br/>";
 
 		return $digito;
 	}
@@ -303,6 +306,7 @@ class Bancoob
 		if ($digito == "0" or $digito == "X" or $digito > 9) {
 			$digito = 1;
 		}
+		//echo "Digito :" . $digito . "<br/>";
 		return $digito;
 	}
 
@@ -380,11 +384,12 @@ class Bancoob
 		}
 		return $num;
 	}
-
+	
 	public static function formata_nossonumero($index, $ag, $conv) {
 		$NNumero = self::formata_numdoc($index,7);
 		$qtde_nosso_numero = 7;
 		$sequencia = self::formata_numdoc($ag,4).self::formata_numdoc(str_replace("-","",$conv),10).$NNumero;
+		//echo $sequencia;
 		$cont=0;
 		$calculoDv = 0;
 		for($num=0;$num<=strlen($sequencia);$num++){
@@ -407,13 +412,20 @@ class Bancoob
 				$constante = 7;
 				$cont = 0;
 			}
-			$calculoDv += ((int)substr((int)$sequencia,(int)$num,1) * (int)$constante);
+			$calculoDv += $sequencia[$num] * $constante;
+			//echo $sequencia[$num]."</br>";
+			//echo "calculoDv etapa" . $num . " " . $cont . " " . $constante . ": " . $calculoDv . "<br/>";
 		}
+		//echo "calculoDv DV: " . $calculoDv . "<br/>";
+
 		$Resto = $calculoDv % 11;
-		$Dv = 11 - $Resto;
-		if ($Dv == 0) $Dv = 0;
-		if ($Dv == 1) $Dv = 0;
-		if ($Dv > 9) $Dv = 0;
+		//echo "Resto DV: " . $Resto . "<br/>";
+		if ($Resto == 0 || $Resto == 1) {
+			$Dv = 0;
+		} else {
+			$Dv = 11 - $Resto;
+		};
+		//echo "DV: " . $Dv . "<br/>";
 
 		return $NNumero."-".$Dv;
 	}

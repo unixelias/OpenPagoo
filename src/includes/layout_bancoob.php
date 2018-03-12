@@ -98,7 +98,7 @@
 		  </tr>
 		  <tr>
 			<td class="bottomline dir"><?php echo $dadosboleto['numero_documento'] ?></td>
-			<td class="bottomline dir"><?php echo $dadosboleto['numero_documento'] ?></td>
+			<td class="bottomline dir"><?php echo $dadosboleto['contrato'] ?></td>
 			<td class="bottomline dir" colspan="3"><?php echo $dadosboleto['cpf_cnpj'] ?></td>
 			<td class="bottomline dir" colspan="2"><?php echo $dadosboleto['data_vencimento'] ?></td>
 			<td class="bottomline dir" colspan="2"><?php echo $dadosboleto['valor_boleto'] ?></td>
@@ -234,7 +234,7 @@
 			<td class="topline" colspan="2">(=) Valor cobrado</td>
 		  </tr>
 		  <tr class="row10">
-			<td class="instrucao com-borda-baixo" colspan="7">Sacador/Avalista: <?php echo isset($dadosboleto['avalista']) ? ' '.$dadosboleto['avalista'] : '' ?></td>
+			<td class="instrucao com-borda-baixo" colspan="7">Sacador/Avalista: <?php echo isset($dadosboleto['nome_avalista']) ? ' '.$dadosboleto['nome_avalista'] : '' ?></td>
 			<td class="bottomline dir" colspan="2"></td>
 		  <tr>
 			<td class="aviso-tracejada" colspan="9">Autenticação mecânica - Ficha de Compensação</td>
@@ -242,6 +242,14 @@
 		  <tr class="row40">
 			<td class="aviso" colspan="9"><?php echo self::fbarcode($dadosboleto['codigo_barras'], $boleto->getImageBasePath()); ?></td>
 			</tr>
+			<!--tr>
+				<td colspan="9">?php
+				foreach ($dadosboleto as $i => $value) {
+					echo ($dadosboleto[$i] . "<br/>");
+				} 
+				?>
+				</td>
+			</tr-->
 		</tbody>
 	</table>
   </body>

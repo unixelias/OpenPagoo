@@ -52,13 +52,13 @@
 					<td class="bottomline dir destaque  sem-borda-dir"><?php echo $dadosboleto['data_vencimento'] ?></td>
 				</tr>
 				<tr>
-					<td class="topline sem-borda-esq">Nª Docto</td>
+					<td class="topline sem-borda-esq">Contrato</td>
 					<td class="topline sem-borda-dir">Nosso Num.</td>
 					<td class="topline sem-borda-esq" colspan="7">Cedente</td>
 					<td class="topline sem-borda-dir">Agência / Código do Cedente</td>
 				</tr>
 				<tr>
-					<td class="bottomline dir sem-borda-esq"><?php echo $dadosboleto['numero_documento'] ?></td>
+					<td class="bottomline dir sem-borda-esq"><?php echo $dadosboleto['contrato'] ?></td>
 					<td class="bottomline dir sem-borda-dir"><?php echo $dadosboleto['nosso_numero'] ?></td>
 					<td class="bottomline sem-borda-esq" colspan="7"><?php echo $dadosboleto['cedente'] ?></td>
 					<td class="bottomline dir  sem-borda-dir"><?php echo $dadosboleto['agencia_codigo'] ?></td>
